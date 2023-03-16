@@ -1,2 +1,3 @@
-# bstb
-best / breastbone - Geocaching toolbox
+# best / breastbone - Geocaching toolbox
+
+N.B. `breastbone` is a random generated project name and has no special meaning.
