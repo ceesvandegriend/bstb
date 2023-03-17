@@ -25,12 +25,24 @@ worth = {
     "x": 24,
     "y": 25,
     "z": 26,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "0": 0,
 }
 
 
 def word_value(word: str) -> int:
+    # filter word
+    w = [c for c in word.lower() if c in "abcdefghijklmnopqrstuvwxyz1234567890"]
     # letter to number
-    scores = [worth[c] for c in word.lower()]
+    scores = [worth[c] for c in w]
 
     # add numbers
     scores = [int(d) for d in str(sum(scores))]
