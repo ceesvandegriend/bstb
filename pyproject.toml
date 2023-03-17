@@ -1,10 +1,10 @@
 [project]
 name = "bstb"
-version = "0.1.0"
+version = "0.1.2"
 description = "Breastbone - Geocaching toolbox"
 authors = [{ name = "Cees van de Griend", email = "cees@griend.eu" }]
 dependencies = []
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 readme = "README.md"
 
 [project.license]
