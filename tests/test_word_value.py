@@ -1,4 +1,4 @@
-from bstb.word_value import word_value
+from bstb import word_value
 
 
 def test_word_value_OOC():

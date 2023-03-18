@@ -39,11 +39,11 @@ worth = {
 
 
 def word_value(word: str) -> int:
+    """Calculate the word value of the string."""
     # filter word
-    w = [c for c in word.lower() if c in "abcdefghijklmnopqrstuvwxyz1234567890"]
+    w = [c for c in word.lower() if c in worth]
     # letter to number
     scores = [worth[c] for c in w]
-
     # add numbers
     scores = [int(d) for d in str(sum(scores))]
 
