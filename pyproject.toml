@@ -1,6 +1,6 @@
 [project]
 name = "bstb"
-version = "0.1.4"
+dynamic = ["version"]
 description = "Breastbone - Geocaching toolbox"
 authors = [{ name = "Cees van de Griend", email = "cees@griend.eu" }]
 dependencies = []
@@ -14,6 +14,11 @@ text = "GPL-3.0"
 Source = "https://github.com/ceesvandegriend/bstb"
 
 [tool.pdm]
+
+[tool.pdm.version]
+source = "file"
+path = "bstb/__init__.py"
+
 [tool.pdm.dev-dependencies]
 dev = ["pytest>=7.2.2", "black>=23.1.0", "pylint>=2.17.0", "pytest-cov>=4.0.0"]
 
