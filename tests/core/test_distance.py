@@ -1,4 +1,5 @@
 import math
+import pytest
 
 from bstb.core import Distance
 
@@ -23,30 +24,41 @@ def test_valid_01():
 def test_01():
     d = Distance(45)
 
-    assert d.degrees == 45
-    assert d.radians == math.pi / 4
-    assert d.nm == 45 * 60
-    assert d.km == 45 * 60 * 1.852
+    assert d.degrees == pytest.approx(45)
+    assert d.radians == pytest.approx(math.pi / 4)
+    assert d.nm == pytest.approx(45 * 60)
+    assert d.km == pytest.approx(45 * 60 * 1.852)
     assert str(d) == f"{45 * 60 * 1.852:0.3f}"
 
 
 def test_02():
     d = Distance()
-    d.nm = 60
+    d.radians = math.pi / 4
 
-    assert d.degrees == 1
-    assert d.radians == math.pi / 180
-    assert d.nm == 60
-    assert d.km == 60 * 1.852
-    assert str(d) == f"{60 * 1.852:0.3f}"
+    assert d.degrees == pytest.approx(45)
+    assert d.radians == pytest.approx(math.pi / 4)
+    assert d.nm == pytest.approx(45 * 60)
+    assert d.km == pytest.approx(45 * 60 * 1.852)
+    assert str(d) == f"{45 * 60 * 1.852:0.3f}"
 
 
 def test_03():
     d = Distance()
-    d.km = 100
+    d.nm = 60
 
-    assert d.degrees == 100 / (60 * 1.852)
-    assert d.radians == 100 * (math.pi / 180) / (60 * 1.852)
-    assert d.nm == 100 / 1.852
-    assert d.km == 100
-    assert str(d) == "100.000"
+    assert d.degrees == pytest.approx(1)
+    assert d.radians == pytest.approx(math.pi / 180)
+    assert d.nm == pytest.approx(60)
+    assert d.km == pytest.approx(60 * 1.852)
+    assert str(d) == f"{60 * 1.852:0.3f}"
+
+
+def test_04():
+    d = Distance()
+    d.km = 1852
+
+    assert d.degrees == pytest.approx(1000 / 60)
+    assert d.radians == pytest.approx((1000 / 60) * (math.pi / 180))
+    assert d.nm == pytest.approx(1000)
+    assert d.km == pytest.approx(1852)
+    assert str(d) == "1852.000"
