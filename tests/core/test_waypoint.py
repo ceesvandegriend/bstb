@@ -6,9 +6,7 @@ from bstb.core import Waypoint
 
 
 def test_constructor_01():
-    lat = Latitude()
-    lng = Longitude()
-    wp = Waypoint(lat, lng)
+    wp = Waypoint()
 
     assert wp
     assert wp.latitude

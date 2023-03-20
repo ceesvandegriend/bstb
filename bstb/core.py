@@ -18,7 +18,7 @@ class Angle:
 
     @property
     def radians(self) -> float:
-        return math.radians(self._degrees)
+        return math.radians(self.degrees)
 
     @radians.setter
     def radians(self, radians: float):
@@ -53,17 +53,17 @@ class Latitude(Angle):
     @classmethod
     def dm(cls, degrees: int, minutes: float):
         if degrees < 0:
-            lat = degrees - minutes / 60
+            lat = degrees - (minutes / 60)
         else:
-            lat = degrees + minutes / 60
+            lat = degrees + (minutes / 60)
         return Latitude(lat)
 
     @classmethod
     def dms(cls, degrees: int, minutes: int, seconds: int):
         if degrees < 0:
-            lat = degrees - minutes / 60 - seconds / 3600
+            lat = degrees - (minutes / 60) - (seconds / 3600)
         else:
-            lat = degrees + minutes / 60 + seconds / 3600
+            lat = degrees + (minutes / 60) + (seconds / 3600)
         return Latitude(lat)
 
 
@@ -89,19 +89,33 @@ class Longitude(Angle):
     @classmethod
     def dm(cls, degrees: int, minutes: float):
         if degrees < 0:
-            lng = degrees - minutes / 60
+            lng = degrees - (minutes / 60)
         else:
-            lng = degrees + minutes / 60
+            lng = degrees + (minutes / 60)
         return Longitude(lng)
 
     @classmethod
     def dms(cls, degrees: int, minutes: int, seconds: int):
         if degrees < 0:
-            lng = degrees - minutes / 60 - seconds / 3600
+            lng = degrees - (minutes / 60) - (seconds / 3600)
         else:
-            lng = degrees + minutes / 60 + seconds / 3600
+            lng = degrees + (minutes / 60) + (seconds / 3600)
         return Longitude(lng)
 
+class Bearing(Angle):
+    def valid(self, degrees: float) -> bool:
+        if degrees >= 0 and degrees <= 360:
+            return True
+        else:
+            return False
+
+    def __str__(self):
+        return f"{self.degrees:07.3f}"
+
+    @classmethod
+    def dms(cls, degrees: int, minutes: int, seconds: int):
+        deg = degrees + (minutes / 60) + (seconds / 3600)
+        return Bearing(deg)
 
 class Distance(Angle):
     def valid(self, degrees: float) -> bool:
@@ -122,21 +136,11 @@ class Distance(Angle):
         return f"{self.km:0.3f}"
 
 
-class Bearing(Angle):
-    def valid(self, degrees: float) -> bool:
-        if degrees >= 0 and degrees <= 360:
-            return True
-        else:
-            return False
-
-    def __str__(self):
-        return f"{self.degrees:07.3f}"
-
 
 class Waypoint:
-    def __init__(self, lat: Latitude, lng: Longitude):
-        self.latitude = lat
-        self.longitude = lng
+    def __init__(self):
+        self.latitude = Latitude()
+        self.longitude = Longitude()
 
     @property
     def latitude(self) -> Latitude:
@@ -175,7 +179,8 @@ class Waypoint:
         lng_deg = int(result.group(5))
         lng_min = float(result.group(6))
 
-        lat = Latitude(lat_sign * (lat_deg + (lat_min / 60)))
-        lng = Longitude(lng_sign * (lng_deg + (lng_min / 60)))
+        wp = Waypoint()
+        wp.latitude = Latitude(lat_sign * (lat_deg + (lat_min / 60)))
+        wp.longitude = Longitude(lng_sign * (lng_deg + (lng_min / 60)))
 
-        return Waypoint(lat, lng)
+        return wp
