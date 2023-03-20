@@ -22,7 +22,8 @@ def test_valid_01():
 
 
 def test_01():
-    d = Distance(45)
+    d = Distance()
+    d.degrees = 45
 
     assert d.degrees == pytest.approx(45)
     assert d.radians == pytest.approx(math.pi / 4)
@@ -56,6 +57,16 @@ def test_03():
 def test_04():
     d = Distance()
     d.km = 1852
+
+    assert d.degrees == pytest.approx(1000 / 60)
+    assert d.radians == pytest.approx((1000 / 60) * (math.pi / 180))
+    assert d.nm == pytest.approx(1000)
+    assert d.km == pytest.approx(1852)
+    assert str(d) == "1852.000"
+
+
+def test_05():
+    d = Distance(1852.0)
 
     assert d.degrees == pytest.approx(1000 / 60)
     assert d.radians == pytest.approx((1000 / 60) * (math.pi / 180))

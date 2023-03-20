@@ -163,6 +163,11 @@ class Bearing(Angle):
 class Distance(Angle):
     """The distance is internally stored in degrees."""
 
+    def __init__(self, distance: float = 0):
+        """Creates a new distance with the given value in km."""
+        super().__init__()
+        self.km = distance
+
     def valid(self, degrees: float) -> bool:
         """Checks if the distance is valid."""
         if degrees >= 0 and degrees <= 180:
