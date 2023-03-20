@@ -1,5 +1,4 @@
 import math
-import pytest
 
 from bstb.core import Distance
 
@@ -21,53 +20,33 @@ def test_valid_01():
     assert not d.valid(181)
 
 
-def test_km_02():
-    d = Distance()
-    d.km = 1.852 * 60
-
-    assert d.degrees == 1
-
-
-def test_str_01():
-    d = Distance()
-
-    assert str(d) == "0.000"
-
-
-def test_str_02():
-    d = Distance(100 / (1.852 * 60))
-
-    assert str(d) == "100.000"
-
-
 def test_01():
     d = Distance(45)
 
     assert d.degrees == 45
+    assert d.radians == math.pi / 4
+    assert d.nm == 45 * 60
+    assert d.km == 45 * 60 * 1.852
+    assert str(d) == f"{45 * 60 * 1.852:0.3f}"
 
 
 def test_02():
-    nm = 60
-    deg = nm / 60
-
-    d = Distance(deg)
+    d = Distance()
+    d.nm = 60
 
     assert d.degrees == 1
+    assert d.radians == math.pi / 180
+    assert d.nm == 60
+    assert d.km == 60 * 1.852
+    assert str(d) == f"{60 * 1.852:0.3f}"
 
 
 def test_03():
-    km = 100
-    deg = km / (60 * 1.852)
+    d = Distance()
+    d.km = 100
 
-    d = Distance(deg)
-
+    assert d.degrees == 100 / (60 * 1.852)
+    assert d.radians == 100 * (math.pi / 180) / (60 * 1.852)
+    assert d.nm == 100 / 1.852
+    assert d.km == 100
     assert str(d) == "100.000"
-
-
-def test_04():
-    rad = math.pi / 2
-    deg = math.degrees(rad)
-
-    d = Distance(deg)
-
-    assert d.degrees == pytest.approx(90.0)

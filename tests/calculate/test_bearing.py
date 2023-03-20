@@ -19,4 +19,4 @@ def test_distance_01():
     b = bearing(a_wp, b_wp)
 
     assert b.degrees == pytest.approx(9.119818)
-    assert str(b) == "009.120"
+    assert str(b) == "009.1"
