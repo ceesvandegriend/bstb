@@ -20,6 +20,10 @@ class Angle:
     def radians(self) -> float:
         return math.radians(self._degrees)
 
+    @radians.setter
+    def radians(self, radians: float):
+        self.degrees = math.degrees(radians)
+
     def valid(self, degrees: float) -> bool:
         if degrees >= -360 and degrees <= 360:
             return True

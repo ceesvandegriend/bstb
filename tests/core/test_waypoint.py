@@ -1,6 +1,8 @@
 import pytest
 
-from bstb.core import Waypoint, Latitude, Longitude
+from bstb.core import Latitude
+from bstb.core import Longitude
+from bstb.core import Waypoint
 
 
 def test_constructor_01():
