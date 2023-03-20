@@ -1,7 +1,5 @@
 import pytest
 
-from bstb.core import Latitude
-from bstb.core import Longitude
 from bstb.core import Waypoint
 
 

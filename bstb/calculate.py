@@ -2,8 +2,6 @@ import math
 
 from bstb.core import Bearing
 from bstb.core import Distance
-from bstb.core import Latitude
-from bstb.core import Longitude
 from bstb.core import Waypoint
 
 
@@ -48,15 +46,15 @@ def distance(a: Waypoint, b: Waypoint) -> Distance:
     return d
 
 
-def waypoint(a_wp: Waypoint, bearing: Bearing, distance: Distance) -> Waypoint:
+def waypoint(a_wp: Waypoint, bear: Bearing, dist: Distance) -> Waypoint:
     """Given a start waypoint, initial bearing and distance, calculate the new waypoint.
 
     See: https://www.movable-type.co.uk/scripts/latlong.html
     """
     a_lat = a_wp.latitude.radians
     a_lng = a_wp.longitude.radians
-    b = bearing.radians
-    d = distance.radians
+    b = bear.radians
+    d = dist.radians
 
     b_lat = math.asin(math.sin(a_lat) * math.cos(d) + math.cos(a_lat) * math.sin(d) * math.cos(b))
     delta_lng = math.atan2(

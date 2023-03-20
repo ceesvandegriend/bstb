@@ -102,6 +102,7 @@ class Longitude(Angle):
             lng = degrees + (minutes / 60) + (seconds / 3600)
         return Longitude(lng)
 
+
 class Bearing(Angle):
     def valid(self, degrees: float) -> bool:
         if degrees >= 0 and degrees <= 360:
@@ -116,6 +117,7 @@ class Bearing(Angle):
     def dms(cls, degrees: int, minutes: int, seconds: int):
         deg = degrees + (minutes / 60) + (seconds / 3600)
         return Bearing(deg)
+
 
 class Distance(Angle):
     def valid(self, degrees: float) -> bool:
@@ -134,7 +136,6 @@ class Distance(Angle):
 
     def __str__(self):
         return f"{self.km:0.3f}"
-
 
 
 class Waypoint:

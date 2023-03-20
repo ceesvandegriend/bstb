@@ -39,10 +39,12 @@ def test_str_02():
 
     assert str(d) == "100.000"
 
+
 def test_01():
     d = Distance(45)
 
     assert d.degrees == 45
+
 
 def test_02():
     nm = 60
@@ -61,6 +63,7 @@ def test_03():
 
     assert str(d) == "100.000"
 
+
 def test_04():
     rad = math.pi / 2
     deg = math.degrees(rad)
@@ -68,4 +71,3 @@ def test_04():
     d = Distance(deg)
 
     assert d.degrees == pytest.approx(90.0)
-
