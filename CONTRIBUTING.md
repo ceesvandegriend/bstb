@@ -2,4 +2,5 @@
 
 Contributions are always welcome.
 
-Send an email to cees@griend.eu if you want to contribute.
+You can always open an issue at
+https://github.com/ceesvandegriend/bstb/issues/.
