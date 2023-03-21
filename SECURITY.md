@@ -12,4 +12,5 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Send an email to cees@griend.eu with all relevant details.
+Open an issue at
+https://github.com/ceesvandegriend/bstb/issues/
