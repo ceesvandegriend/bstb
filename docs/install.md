@@ -1,6 +1,4 @@
 
-* [Index](README.md)
-
 # Install
 
 `bstb` is a standard Python package.

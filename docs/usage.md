@@ -1,5 +1,3 @@
-- [Index](README.md)
-
 # Usage
 
 ## Calculate bearing
@@ -50,5 +48,7 @@ wp1 = destination(wp0, b, d)
 
 print(f"Destination: {wp1}") # N51 58.704 E004 10.756
 ```
+
+## More examples
 
 Look in the `tests/` directory for more examples.
