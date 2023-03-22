@@ -20,6 +20,7 @@ classifiers = [
 text = "GPL-3.0"
 
 [project.urls]
+Documentation = " https://ceesvandegriend.github.io/bstb/"
 Source = "https://github.com/ceesvandegriend/bstb"
 
 [tool.pdm]
