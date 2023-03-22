@@ -17,3 +17,13 @@ def test_destination_01():
     wp1 = destination(wp0, b, d)
 
     assert str(wp1) == "N53 11.290 E000 08.072"
+
+
+def test_destination_02():
+    wp0 = Waypoint.parse("N52 00.000 E004 00.000")
+    b = Bearing(101)
+    d = Distance(12.5)
+
+    wp1 = destination(wp0, b, d)
+
+    assert str(wp1) == "N51 58.704 E004 10.756"

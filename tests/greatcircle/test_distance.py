@@ -20,10 +20,10 @@ def test_distance_01():
     assert d.degrees == pytest.approx(968.853 / (1.852 * 60))
 
 
-# def test_distance_02():
-#     wp0 = Waypoint.parse("N52 00.000 E004 00.000")
-#     wp1 = Waypoint.parse("N51 58.000 E004 10.000")
-#     d = distance(wp0, wp1)
+def test_distance_02():
+    wp0 = Waypoint.parse("N52 00.000 E004 00.000")
+    wp1 = Waypoint.parse("N51 58.000 E004 10.000")
+    d = distance(wp0, wp1)
 
-#     assert d.km == pytest.approx(12.03627)
-#     assert str(d) == "12.036"
+    assert d.km == pytest.approx(12.000713)
+    assert str(d) == "12.001"
