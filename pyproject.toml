@@ -1,7 +1,7 @@
 [project]
 name = "bstb"
 dynamic = ["version"]
-description = "Breastbone - Geocaching toolbox"
+description = "bstb - Geocaching toolbox"
 authors = [{ name = "Cees van de Griend", email = "cees@griend.eu" }]
 dependencies = []
 requires-python = ">=3.9"
