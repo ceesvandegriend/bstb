@@ -3,7 +3,9 @@ name = "bstb"
 dynamic = ["version"]
 description = "bstb - Geocaching toolbox"
 authors = [{ name = "Cees van de Griend", email = "cees@griend.eu" }]
-dependencies = []
+dependencies = [
+    "drawsvg>=2.1.1",
+]
 requires-python = ">=3.9"
 readme = "README.md"
 classifiers = [

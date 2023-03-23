@@ -73,6 +73,11 @@ requires_python = ">=3.7"
 summary = "serialize all of python"
 
 [[package]]
+name = "drawsvg"
+version = "2.1.1"
+summary = "A Python 3 library for programmatically generating SVG (vector) images and animations.  Drawsvg can also render to PNG, MP4, and display your drawings in Jupyter notebook and Jupyter lab."
+
+[[package]]
 name = "exceptiongroup"
 version = "1.1.1"
 requires_python = ">=3.7"
@@ -201,7 +206,7 @@ summary = "Module for decorators, wrappers and monkey patching."
 
 [metadata]
 lock_version = "4.1"
-content_hash = "sha256:ae59e38dbe806c9208adb30cbee504fed12cc0753d6b381fb4c3c502e3e2b7c2"
+content_hash = "sha256:7c2198c87d9b63cda869992d6770c3cf46e34368fdd135ab94e7906306515cce"
 
 [metadata.files]
 "astroid 2.15.0" = [
@@ -303,6 +308,9 @@ content_hash = "sha256:ae59e38dbe806c9208adb30cbee504fed12cc0753d6b381fb4c3c502e
 "dill 0.3.6" = [
     {url = "https://files.pythonhosted.org/packages/7c/e7/364a09134e1062d4d5ff69b853a56cf61c223e0afcc6906b6832bcd51ea8/dill-0.3.6.tar.gz", hash = "sha256:e5db55f3687856d8fbdab002ed78544e1c4559a130302693d839dfe8f93f2373"},
     {url = "https://files.pythonhosted.org/packages/be/e3/a84bf2e561beed15813080d693b4b27573262433fced9c1d1fea59e60553/dill-0.3.6-py3-none-any.whl", hash = "sha256:a07ffd2351b8c678dfc4a856a3005f8067aea51d6ba6c700796a4d9e280f39f0"},
+]
+"drawsvg 2.1.1" = [
+    {url = "https://files.pythonhosted.org/packages/4e/66/82d45bfcec672377f8b7051343c0164200d1eaf92cca6f5f846bde191e57/drawsvg-2.1.1-py3-none-any.whl", hash = "sha256:2ba5c4ee7f6a89c26a3f29d7d65e139d2cdbe11671015fa6c9d9d943e8c18bf8"},
 ]
 "exceptiongroup 1.1.1" = [
     {url = "https://files.pythonhosted.org/packages/61/97/17ed81b7a8d24d8f69b62c0db37abbd8c0042d4b3fc429c73dab986e7483/exceptiongroup-1.1.1-py3-none-any.whl", hash = "sha256:232c37c63e4f682982c8b6459f33a8981039e5fb8756b2074364e5055c498c9e"},
