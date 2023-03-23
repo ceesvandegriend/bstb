@@ -8,10 +8,12 @@
 
 ## Index
 
+* [Introduction](introduction.md)
 * [Install](install.md)
 * Usage
   - [Bearing](usage/bearing.md)
   - [Distance](usage/distance.md)
   - [Destination](usage/bearing.md)
+* [Epilogue](epilogue.md)
 
 `bstb / breastbone` is a random generated project name and has no special meaning.
