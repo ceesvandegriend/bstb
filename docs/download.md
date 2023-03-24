@@ -10,4 +10,4 @@
 
 ## Documentation
 
-- [bstb](https://bstb.griend.eu/)
+- [GitHub Pages](https://bstb.griend.eu/)
