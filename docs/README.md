@@ -3,17 +3,16 @@
 
 # bstb - Geocaching toolbox
 
-[![Geocaching](image/geocaching.png)](https://www.geocaching.com)
+[![Geocaching](image/geocaching.svg)](https://www.geocaching.com)
 [![Moluk](image/moluk.svg)](https://github.com/ceesvandegriend/bstb/)
 
 ## Index
 
 * [Introduction](introduction.md)
 * [Install](install.md)
+* [Download](download.md)
 * Usage
   - [Bearing](usage/bearing.md)
   - [Distance](usage/distance.md)
   - [Destination](usage/bearing.md)
 * [Epilogue](epilogue.md)
-
-`bstb / breastbone` is a random generated project name and has no special meaning.
