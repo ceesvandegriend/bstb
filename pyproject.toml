@@ -40,7 +40,7 @@ lint = "python3 -m pylint --disable=C,R bstb/ tests/"
 format = "python3 -m black bstb/ tests/"
 
 [tool.pytest.ini_options]
-addopts = "--cov=bstb"
+addopts = ["--cov=bstb"]
 python_classes = ["Test"]
 python_functions = ["test_"]
 python_files = ["test_*.py"]
