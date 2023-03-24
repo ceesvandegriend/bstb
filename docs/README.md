@@ -10,9 +10,8 @@
 
 * [Introduction](introduction.md)
 * [Install](install.md)
-* [Download](download.md)
+* [Useful links](links.md)
 * Usage
   - [Bearing](usage/bearing.md)
   - [Distance](usage/distance.md)
   - [Destination](usage/bearing.md)
-* [Epilogue](epilogue.md)
