@@ -130,3 +130,5 @@ dmypy.json
 
 # Python Dependencies Manager
 .pdm.toml
+
+.DS_Store/

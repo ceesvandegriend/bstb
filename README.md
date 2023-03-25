@@ -1,6 +1,6 @@
 [![CI](https://github.com/ceesvandegriend/bstb/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ceesvandegriend/bstb/actions/workflows/ci.yml)
 
-[Geocaching](https://www.geocaching.com/) toolbox as a Python package
+[Geocaching](https://www.geocaching.com/) toolbox as a Python package on
 [PyPi](https://www.pypi.org/project/bstb/).
 
 ## Documentation

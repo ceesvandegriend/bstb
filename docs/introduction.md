@@ -16,13 +16,15 @@ So I started coding this package.
 
 ## Formulas
 
-I don't know which formulas
-[GeoCaching Toolbox](https://www.geocachingtoolbox.com/)
-uses, but I couldn't reproduce the results.
+### Loxodrome and Great circle
 
-I used the formulas on
+I used the loxodrome and great circle formulas on
 [Movable Type Scripts](https://www.movable-type.co.uk/scripts/latlong.html).
 Those I recognized from my studies at a Nautical Collage.
+
+### Geodesic
+
+[GeoCaching Toolbox](https://www.geocachingtoolbox.com/)
 
 ## Project name
 
