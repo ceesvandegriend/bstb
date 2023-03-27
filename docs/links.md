@@ -16,6 +16,6 @@
 
 * [PyPi](https://pypi.org/project/bstb/)
 
-## Geocaching
+## Geocaching Profile
 
-* [GC Profile](https://www.geocaching.com/p/?code=PR1HRV1G)
+* [Team Molûk](https://www.geocaching.com/p/?code=PR1HRV1G)

@@ -24,7 +24,7 @@ build:
 	pdm build
 
 publish:
-	@echo "+++ Upload +++"
+	@echo "+++ Publish +++"
 	pdm publish
 
 clean:
@@ -32,4 +32,5 @@ clean:
 	@rm -rf __pypackages__/
 	@rm -rf build/
 	@rm -rf dist/
+	@rm -rf .pytest_cache/ .coverage
 	@find bstb/ tests/ -type d -name __pycache__ -exec rm -rf {} \;

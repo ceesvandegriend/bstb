@@ -1,9 +1,25 @@
-# Usage: Destination
-
-## Calculate destination
+# Usage: Calculate destination
 
 Given a start location, a bearing and distance in km,
 calculate the final location.
+
+## Loxodrome formula
+
+```python
+from bstb.core import Bearing
+from bstb.core import Distance
+from bstb.core import Waypoint
+from bstb.loxodrome import destination
+
+wp0 = Waypoint.parse("N52 00.000 E004 00.000")
+b = Bearing(101)
+d = Distance(12.5)
+wp1 = destination(wp0, b, d)
+
+print(f"Destination: {wp1}") # N51 58.712 E004 10.759
+```
+
+## Great Circle formula
 
 ```python
 from bstb.core import Bearing
